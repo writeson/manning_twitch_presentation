@@ -8,9 +8,9 @@ app.logger.info("MyBlog is running")
 
 @app.get("/")
 def home():
-    return render_template("index.html")
+    return render_template("home/index.html")
 
 
 @app.get("/content")
 def content():
-    return render_template("content.html")
+    return render_template("content/index.html")

@@ -9,4 +9,3 @@ app.logger.info("MyBlog is running")
 @app.get("/")
 def home():
     return render_template("index.html")
-
