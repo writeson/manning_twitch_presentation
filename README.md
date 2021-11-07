@@ -64,4 +64,4 @@ This will start the Flask development server. You can open a browser to `localho
    1. The versatility of this starting point will be shown in later examples
 1. Shows creating more complex web pages
 1. Shows how to use Jinja2 templates and template inheritance to manage complex web pages
-1. Makes use of Flask Blueprints to namespace and modularize your web applications features
+1. Makes use of Flask Blueprints to namespace and modularize your web applications features. Also added Blueprint specific styling and JavaScript.
