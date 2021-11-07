@@ -14,24 +14,26 @@ There is a port of pyenv for windows you can find [here](https://github.com/pyen
 Once you have pyenv installed, install the 3.9.6 version of Python with this command in a terminal:
 
 ```console
-pyenv install 3.9.6
+$ pyenv install 3.9.6
 ```
 
-To create a Python virtual environment in the directory where you've cloned this repo take the following steps once `pyenv` is installed:
+To create a Python virtual environment in the directory where you've cloned this repo take the following steps from a terminal command line once `pyenv` is installed:
 
-1. cd <folder where you've cloned the repo>
-1. pyenv local 3.9.6
-1. python -m venv .venv
-1. source .venv/bin/activate
-1. python pip install --upgrade pip
-1. pip install -r requirements.txt
+```console
+$ cd <folder where you've cloned the repo>
+$ pyenv local 3.9.6
+$ python -m venv .venv
+$ source .venv/bin/activate
+$ python pip install --upgrade pip
+$ pip install -r requirements.txt
+```
 
 These steps will create and activate a Python 3.9.6 virtual environment in the directory where you've cloned the repo. It will also install the necessary modules (Flask) to run the example applications.
 
 To deactivate the Python virtual environment enter the command from the terminal:
 
 ```console
-deactivate
+$ deactivate
 ```
 
 ## Running The Examples
@@ -39,23 +41,23 @@ deactivate
 To run the example applications you must activate the Python 3.9.6 virtual environment with this command from a terminal in Mac or Linux:
 
 ```console
-source .venv/bin/activate
+$ source .venv/bin/activate
 ```
 
 Then set some environment variables that are used by Flask:
 
 ```console
-export FLASK_APP=myapp.py
-export FLASK_ENV=development
+$ export FLASK_APP=myapp.py
+$ export FLASK_ENV=development
 ```
 
-To run a particular example application move to the folder in example folder that contains the `myapp.py` file and enter this command from a terminal:
+To run a particular example application move to the folder in the example folder containing the `myapp.py` file and enter this command from a terminal:
 
 ```console
-flask run
+$ flask run
 ```
 
-This will start the Flask development server. You can open a browser to `localhost:5000` to navigate to the web application. The `CTRL-C` key combination in the terminal window will exit the Flask server.
+This command will start the Flask development server. You can open a browser to `localhost:5000` to navigate to the web application. The `CTRL-C` key combination in the terminal window will exit the Flask server.
 
 # Examples
 
