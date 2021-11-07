@@ -1,17 +1,7 @@
 from flask import render_template
-from app import create_app
+from . import content_bp
 
-
-app = create_app()
-app.logger.info("MyBlog is running")
-
-
-@app.get("/")
-def home():
-    return render_template("home.html")
-
-
-@app.get("/content")
+@content_bp.get("/content")
 def content():
     data = [ 
         {
