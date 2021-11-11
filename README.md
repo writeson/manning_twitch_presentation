@@ -49,6 +49,7 @@ Then set some environment variables that are used by Flask:
 ```console
 $ export FLASK_APP=myapp.py
 $ export FLASK_ENV=development
+$ export FLASK_DEBUG=1
 ```
 
 To run a particular example application move to the folder in the example folder containing the `myapp.py` file and enter this command from a terminal:
@@ -67,3 +68,4 @@ This command will start the Flask development server. You can open a browser to 
 1. Shows creating more complex web pages
 1. Shows how to use Jinja2 templates and template inheritance to manage complex web pages
 1. Makes use of Flask Blueprints to namespace and modularize your web applications features. Also added Blueprint specific styling and JavaScript.
+1. Modifies the previous example to create a database, move the content into the database and use it to build the content page.

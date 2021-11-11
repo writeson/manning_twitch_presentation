@@ -3,7 +3,7 @@ from . import content_bp
 
 @content_bp.get("/content")
 def content():
-    data = [ 
+    content = [ 
         {
             "title": "Content Item 1",
             "image_filename": "puppy_1.jpg",
@@ -29,4 +29,4 @@ def content():
             ]
         }
     ]
-    return render_template("content.html", data=data)
+    return render_template("content.html", content=content)

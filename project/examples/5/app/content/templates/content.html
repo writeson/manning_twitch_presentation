@@ -4,7 +4,7 @@
 <!-- Content -->
 <div class="container d-flex flex-column mt-3 mb-3">
     <div class="accordion" id="accordionExample">
-        {% for item in data %}
+        {% for item in content %}
         <div class="accordion-item">
             <h2 class="accordion-header" id="heading_{{ loop.index }}">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_{{ loop.index }}" aria-expanded="true" aria-controls="collapse_{{ loop.index }}">
