@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Content -->
+<div class="container d-flex flex-column mt-3 mb-3">
+    <div class="accordion" id="accordionExample">
+        {% for item in content %}
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading_{{ loop.index }}">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_{{ loop.index }}" aria-expanded="true" aria-controls="collapse_{{ loop.index }}">
+                {{ item.title }}
+            </button>
+            </h2>
+            <div id="collapse_{{ loop.index }}" class="accordion-collapse collapse" aria-labelledby="heading_{{ loop.index }}" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <img src="{{url_for('content_bp.static', filename='assets/img/' + item.image_filename)}}" class="img-fluid" width="200px" alt="Image of puppy">
+                    {% for line in item.text.split("\n") %}
+                    <p>
+                        {{ line }}
+                    </p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <!-- extra javascript inserted content -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingJS">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJS" aria-expanded="true" aria-controls="collapseJS">
+                    JavaScript Inserted Content
+                </button>
+            </h2>
+            <div id="collapseJS" class="accordion-collapse collapse" aria-labelledby="headingJS" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p id="dynamic_content">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block styles %}
+{{ super() }}
+<link href="{{url_for('.static', filename='css/content.css')}}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="{{url_for('.static', filename='js/content.js')}}"></script>
+{% endblock %}
